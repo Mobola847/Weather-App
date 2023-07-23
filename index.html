@@ -1,21 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-      <link rel="stylesheet" href="src/styles.css">
-</head>
-<body>
-    <div>
-        <h1>
-            Weather App
-        </h1>
-        <p><a href="">Open source code</a>by Omobolanle Bashir</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="view">
+        <h1>Lagos</h1>
+        <div class="row">
+          <div class="col-3">
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png"
+              alt=""
+            />
+            26 °C | °F
+          </div>
+          <div class="col-3">
+            <ul>
+              <li>Precipitation: 60%</li>
+              <li>Humidity: 94%</li>
+              <li>Wind: 18 Km/h</li>
+            </ul>
+          </div>
+          <div class="col-3"></div>
+          <div class="col-3">
+            <ul>
+              <li><strong>Weather</strong></li>
+              <li>Sunday 15:00</li>
+              <li>Light rain showers</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row p-4">
+          <div class="col">
+            MON <br />🌧️ <br /><br />
+            30°<br />
+            24°
+          </div>
+          <div class="col">
+            TUE <br />
+            🌧️ <br /><br />
+            29°<br />
+            24°
+          </div>
+          <div class="col">
+            WED <br />
+            ⛈️ <br /><br />
+            28° <br />
+            23°
+          </div>
+          <div class="col">
+            THU <br />
+            ⛈️
+            <br /><br />
+            29° <br />
+            23°
+          </div>
+          <div class="col">
+            FRI
+            <br />
+            ⛈️
+            <br />
+            <br />
+            28° <br />
+            23°
+          </div>
+        </div>
+        <br>
+        <p>
+          <a
+            href="https://github.com/Mobola847/Weather-App/tree/main"
+            target="_blank"
+            >Open source code</a
+          >
+          by Omobolanle Bashir
+        </p>
+      </div>
     </div>
-      
 
     <script src="src/weather.js"></script>
-</body>
+  </body>
 </html>
