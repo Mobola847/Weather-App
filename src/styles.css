@@ -1,12 +1,50 @@
 h1 {
-    color:blue
+  color: blue;
+  margin-bottom:25px
 }
 
-.view{
-    border: 1px solid;
-    padding: 20px 20px ;
+ul {
+  list-style-type: none;
+  color: #70757a;
+  display: inline-block;
+  font-size: 18px;
+  margin:0px;
+  padding:0px;
 }
 
-ul{
-    list-style-type:none
+.wrapper {
+    max-width:1000px;
+    margin:0 auto;
+    margin-top:10px;
+}
+
+.view {
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 30px 30px;
+}
+
+
+.temp{
+    font-size: 25px;
+}
+
+.weather-temperature strong{
+    font-size:64px;
+    line-height:1;
+  
+}
+.weather-temperature .units{
+    position: relative;
+    bottom: 32px;
+    
+}
+
+.info{
+    margin:px;
+}
+
+.days{
+    margin:25px 0px;
+    padding:20px
 }

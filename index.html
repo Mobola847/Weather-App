@@ -14,68 +14,78 @@
   </head>
   <body>
     <div class="container">
-      <div class="view">
-        <h1>Lagos</h1>
-        <div class="row">
-          <div class="col-3">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png"
-              alt=""
-            />
-            26 °C | °F
+      <div class="wrapper">
+        <div class="view">
+          <h1>Lagos</h1>
+          <div class="row">
+            <div class="col-3">
+              <div class="d-flex weather-temperature">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/rain_light.png"
+                  alt="Clear"
+                  id="icon"
+                />
+                <div>
+                  <strong class="temp" id="temperature">26</strong
+                  ><span class="units"
+                    ><span class="unit-c">°C</span> |
+                    <span class="unit-f">°F</span></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-3">
+              <ul class="details">
+                <li>Precipitation: 60%</li>
+                <li>Humidity: 94%</li>
+                <li>Wind: 18 Km/h</li>
+              </ul>
+            </div>
+            <div class="col-3"></div>
+            <div class="col-3">
+              <ul>
+                <li><strong>Weather</strong></li>
+                <li>Sunday 15:00</li>
+                <li>Light rain showers</li>
+              </ul>
+            </div>
           </div>
-          <div class="col-3">
-            <ul>
-              <li>Precipitation: 60%</li>
-              <li>Humidity: 94%</li>
-              <li>Wind: 18 Km/h</li>
-            </ul>
-          </div>
-          <div class="col-3"></div>
-          <div class="col-3">
-            <ul>
-              <li><strong>Weather</strong></li>
-              <li>Sunday 15:00</li>
-              <li>Light rain showers</li>
-            </ul>
+          <div class="row p-4 days ">
+            <div class="col">
+              MON <br />🌧️ <br /><br />
+              30°<br />
+              24°
+            </div>
+            <div class="col">
+              TUE <br />
+              🌧️ <br /><br />
+              29°<br />
+              24°
+            </div>
+            <div class="col">
+              WED <br />
+              ⛈️ <br /><br />
+              28° <br />
+              23°
+            </div>
+            <div class="col">
+              THU <br />
+              ⛈️
+              <br /><br />
+              29° <br />
+              23°
+            </div>
+            <div class="col">
+              FRI
+              <br />
+              ⛈️
+              <br />
+              <br />
+              28° <br />
+              23°
+            </div>
           </div>
         </div>
-        <div class="row p-4">
-          <div class="col">
-            MON <br />🌧️ <br /><br />
-            30°<br />
-            24°
-          </div>
-          <div class="col">
-            TUE <br />
-            🌧️ <br /><br />
-            29°<br />
-            24°
-          </div>
-          <div class="col">
-            WED <br />
-            ⛈️ <br /><br />
-            28° <br />
-            23°
-          </div>
-          <div class="col">
-            THU <br />
-            ⛈️
-            <br /><br />
-            29° <br />
-            23°
-          </div>
-          <div class="col">
-            FRI
-            <br />
-            ⛈️
-            <br />
-            <br />
-            28° <br />
-            23°
-          </div>
-        </div>
-        <br>
         <p>
           <a
             href="https://github.com/Mobola847/Weather-App/tree/main"
