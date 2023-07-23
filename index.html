@@ -17,6 +17,12 @@
       <div class="wrapper">
         <div class="view">
           <h1>Lagos</h1>
+          <form>
+            <div class="mb-1">
+              <input type="text" class="form-control" id="form-text" />
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+          </form>
           <div class="row">
             <div class="col-3">
               <div class="d-flex weather-temperature">
@@ -26,7 +32,7 @@
                   id="icon"
                 />
                 <div>
-                  <strong class="temp" id="temperature">26</strong
+                  <strong class="temp" class="temperature">26</strong
                   ><span class="units"
                     ><span class="unit-c">°C</span> |
                     <span class="unit-f">°F</span></span
@@ -37,20 +43,20 @@
             <div class="col-3">
               <ul class="details">
                 <li>Precipitation: 60%</li>
-                <li>Humidity: 94%</li>
-                <li>Wind: 18 Km/h</li>
+                <li>Humidity:<span class="Humidity">94</span>%</li>
+                <li>Wind:<span class="Wind">18</span> Km/h</li>
               </ul>
             </div>
             <div class="col-3"></div>
             <div class="col-3">
               <ul>
                 <li><strong>Weather</strong></li>
-                <li>Sunday 15:00</li>
+                <li id="date">Sunday 15:00</li>
                 <li>Light rain showers</li>
               </ul>
             </div>
           </div>
-          <div class="row p-4 days ">
+          <div class="row p-4 days">
             <div class="col">
               MON <br />🌧️ <br /><br />
               30°<br />
