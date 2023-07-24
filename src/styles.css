@@ -1,6 +1,6 @@
 h1 {
   color: blue;
-  margin-bottom:25px
+  margin-bottom: 25px;
 }
 
 ul {
@@ -8,14 +8,18 @@ ul {
   color: #70757a;
   display: inline-block;
   font-size: 18px;
-  margin:0px;
-  padding:0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+form{
+  margin-bottom:10px;
 }
 
 .wrapper {
-    max-width:1000px;
-    margin:0 auto;
-    margin-top:10px;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
 .view {
@@ -24,27 +28,49 @@ ul {
   padding: 30px 30px;
 }
 
+.temp {
+  font-size: 25px;
 
-.temp{
-    font-size: 25px;
 }
 
-.weather-temperature strong{
-    font-size:64px;
-    line-height:1;
-  
+.weather-temperature strong {
+  font-size: 64px;
+  line-height: 1;
 }
-.weather-temperature .units{
-    position: relative;
-    bottom: 32px;
-    
-}
-
-.info{
-    margin:px;
+.weather-temperature .units {
+  position: relative;
+  bottom: 32px;
+  display:inline-block;
 }
 
-.days{
-    margin:25px 0px;
-    padding:20px
+.info {
+  margin: px;
+}
+
+.days {
+  margin: 25px 0px;
+  padding: 20px;
+}
+
+.form-size {
+  width: 50%;
+  display:inline;
+  margin-right: 25px;
+}
+
+.search{
+  margin-right: 15px;
+}
+
+.weather-temperature .units button{
+  border:0px;
+  background-color: transparent;
+  color: blue;
+  transition:all ease-in-out 200ms;
+
+}
+
+.weather-temperature .units button:hover{
+  color:black;
+ 
 }

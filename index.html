@@ -10,6 +10,8 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
@@ -18,11 +20,13 @@
         <div class="view">
           <h1>Lagos</h1>
           <form>
-            <div class="mb-1">
-              <input type="text" class="form-control" id="form-text" />
-            </div>
-            <button type="submit" class="btn btn-primary">Search</button>
+            <span class="mb-1">
+              <input type="text" class="form-control form-size" id="form-text" />
+            </span>
+            <button type="submit" class="btn btn-primary search">Search</button>
+            <button class="btn btn-success current">Current</button>
           </form>
+          
           <div class="row">
             <div class="col-3">
               <div class="d-flex weather-temperature">
@@ -32,18 +36,18 @@
                   id="icon"
                 />
                 <div>
-                  <strong class="temp" class="temperature">26</strong
+                  <strong class="temp" id="temperature">26</strong
                   ><span class="units"
-                    ><span class="unit-c">°C</span> |
-                    <span class="unit-f">°F</span></span
+                    ><span class="unit-c"><button>°C</button></span> |
+                    <span class="unit-f"><button>°F</button></span></span
                   >
                 </div>
               </div>
             </div>
             <div class="col-3">
               <ul class="details">
-                <li>Precipitation: 60%</li>
-                <li>Humidity:<span class="Humidity">94</span>%</li>
+                <li>Precipitation: <span id="Precipitation">60</span>%</li>
+                <li>Humidity:<span id="Humidity">94</span>%</li>
                 <li>Wind:<span class="Wind">18</span> Km/h</li>
               </ul>
             </div>
@@ -52,7 +56,7 @@
               <ul>
                 <li><strong>Weather</strong></li>
                 <li id="date">Sunday 15:00</li>
-                <li>Light rain showers</li>
+                <li id="description">Light rain showers</li>
               </ul>
             </div>
           </div>

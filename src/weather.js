@@ -10,25 +10,45 @@ let day = days[now.getDay()];
 let minutes = now.getMinutes();
 currentDate.innerHTML = `${day} ${hours}:${minutes}`;
 
-let humid = document.querySelector(".Humidity");
+let humid = document.querySelector("#Humidity");
 let wind = document.querySelector(".Wind");
-let temperature = document.querySelector(".temperature");
+let temperature = document.querySelector("#temperature");
+let description = document.querySelector("#description");
+let precipitation = document.querySelector("#Precipitation");
+let current = document.querySelector(".current")
 
 let h1 = document.querySelector("h1");
 let formText = document.querySelector("#form-text");
+let form = document.querySelector("form");
 
 function changes(response) {
-  humid.innerHTML = `${response.data.main.humid}`;
-  wind.innerHTML = `${response.data.main.wind}`;
-  temperature.innerHTML = `${response.data.main.temp}`;
+  h1.innerHTML = `${formText.value}`;
+  humid.innerHTML = `${response.data.main.humidity}`;
+  wind.innerHTML = `${response.data.wind.speed}`;
+  precipitation.innerHTML = `${response.data.rain["1h"]}`;
+  temperature.innerHTML = Math.round(`${response.data.main.temp}`);
+  description.innerHTML = `${response.data.weather[0].description}`;
+  console.log(response);
 }
 
 function getResult(event) {
   event.preventDefault();
-
-  h1 = `Weather in ${formText.value}`;
-
   axios.get(`${apiUrl}&appid=${apiKey}&q=${formText.value}`).then(changes);
 }
 
-formText.addEventListener("submit", getResult);
+form.addEventListener("submit", getResult);
+
+
+function showPosition(position){
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  axios.get(`${apiUrl}&appid=${apiKey}&lat=${lat}&lon=${lon}`).then(changes)
+  console.log(position)
+}
+
+function currentPosition(){
+  navigator.geolocation.getCurrentPosition(showPosition)
+}
+
+
+current.addEventListener("click",currentPosition)
