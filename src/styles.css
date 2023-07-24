@@ -16,6 +16,10 @@ form{
   margin-bottom:10px;
 }
 
+img{
+  font-size:5px;
+}
+
 .wrapper {
   max-width: 1000px;
   margin: 0 auto;
