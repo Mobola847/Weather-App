@@ -39,6 +39,7 @@ img {
 .weather-temperature strong {
   font-size: 64px;
   line-height: 1;
+  margin-right: 8px;
 }
 .weather-temperature .units {
   position: relative;
