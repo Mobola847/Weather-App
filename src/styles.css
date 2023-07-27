@@ -12,12 +12,12 @@ ul {
   padding: 0px;
 }
 
-form{
-  margin-bottom:10px;
+form {
+  margin-bottom: 10px;
 }
 
-img{
-  font-size:5px;
+img {
+  font-size: 5px;
 }
 
 .wrapper {
@@ -34,7 +34,6 @@ img{
 
 .temp {
   font-size: 25px;
-
 }
 
 .weather-temperature strong {
@@ -43,8 +42,9 @@ img{
 }
 .weather-temperature .units {
   position: relative;
-  bottom: 32px;
-  display:inline-block;
+  bottom: 30px;
+  font-size: 12px;
+  
 }
 
 .info {
@@ -58,23 +58,19 @@ img{
 
 .form-size {
   width: 50%;
-  display:inline;
+  display: inline;
   margin-right: 25px;
 }
 
-.search{
+.search {
   margin-right: 15px;
 }
 
-.weather-temperature .units button{
-  border:0px;
-  background-color: transparent;
-  color: blue;
-  transition:all ease-in-out 200ms;
-
+.weather-temperature .units .active{
+  color:black;
+  text-decoration: none;
 }
 
-.weather-temperature .units button:hover{
-  color:black;
- 
+.weather-temperature .units .active:hover{
+  cursor:default;
 }

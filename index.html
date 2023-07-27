@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-  
+
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
@@ -21,12 +21,16 @@
           <h1 id="city">Lagos</h1>
           <form>
             <span class="mb-1">
-              <input type="text" class="form-control form-size" id="form-text" />
+              <input
+                type="text"
+                class="form-control form-size"
+                id="form-text"
+              />
             </span>
             <button type="submit" class="btn btn-primary search">Search</button>
             <button class="btn btn-success current">Current</button>
           </form>
-          
+
           <div class="row">
             <div class="col-3">
               <div class="d-flex weather-temperature">
@@ -40,15 +44,21 @@
                 <div>
                   <strong class="temp" id="temperature">26</strong
                   ><span class="units"
-                    ><span class="unit-c"><button>°C</button></span> |
-                    <span class="unit-f"><button>°F</button></span></span
+                    ><span
+                      ><a href="" class="active" id="celcius-temp">°C</a></span
+                    >
+                    |
+                    <span
+                      ><a href="" class="unit-f" id="fahrenheit-temp"
+                        >°F</a
+                      ></span
+                    ></span
                   >
                 </div>
               </div>
             </div>
             <div class="col-3">
               <ul class="details">
-                <li>Precipitation: <span id="Precipitation">60</span>%</li>
                 <li>Humidity:<span id="Humidity">94</span>%</li>
                 <li>Wind:<span class="Wind">18</span> Km/h</li>
               </ul>
