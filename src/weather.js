@@ -29,6 +29,28 @@ let h1 = document.querySelector("h1");
 let formText = document.querySelector("#form-text");
 let form = document.querySelector("form");
 
+function displayForecast() {
+  let forecast = document.querySelector("#forecast");
+  let days = ["Mon", "Tue", "Wed"];
+  let forecastHtml = "";
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      ` <div class="col-2">             
+              <div class="weather-temperature-date">${day}</div>
+              <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="..." class="icon-day" width="50px" height="50px">
+              <div class="weather-range">
+                <span class="weather-temperature-max">30°</span>
+                <span class="weather-temperature-min">24°</span>
+              </div>
+            </div> `;
+  });
+
+  forecast.innerHTML = forecastHtml;
+}
+
+displayForecast();
+
 function changes(response) {
   let weatherCode = `${response.data.weather[0].icon}`;
   description.innerHTML = `${response.data.weather[0].description}`;
@@ -69,22 +91,19 @@ function fahrhenheitLink(event) {
   event.preventDefault();
   let fahrhenheitTemperature = (9 * celciusTemperature) / 5 + 32;
   temperature.innerHTML = `${Math.round(fahrhenheitTemperature)}`;
-  celcLink.classList.remove("active")
-  fahrLink.classList.add("active")
+  celcLink.classList.remove("active");
+  fahrLink.classList.add("active");
 }
 
-function celciusLink(event){
-  event.preventDefault()
-  temperature.innerHTML = celciusTemperature
+function celciusLink(event) {
+  event.preventDefault();
+  temperature.innerHTML = celciusTemperature;
   celcLink.classList.add("active");
   fahrLink.classList.remove("active");
 }
-
-
-
 
 let fahrLink = document.querySelector("#fahrenheit-temp");
 let celcLink = document.querySelector("#celcius-temp");
 
 fahrLink.addEventListener("click", fahrhenheitLink);
-celcLink.addEventListener("click", celciusLink)
+celcLink.addEventListener("click", celciusLink);

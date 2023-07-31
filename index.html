@@ -42,7 +42,7 @@
                   width="75px"
                   height="75px"
                 />
-                <div>
+                <span>
                   <strong class="temp" id="temperature">26</strong
                   ><span class="units"
                     ><span
@@ -55,7 +55,7 @@
                       ></span
                     ></span
                   >
-                </div>
+                  </span>
               </div>
             </div>
             <div class="col-3">
@@ -72,42 +72,19 @@
                 <li id="description">Light rain showers</li>
               </ul>
             </div>
-          </div>
-          <div class="row p-4 days">
-            <div class="col">
-              MON <br />🌧️ <br /><br />
-              30°<br />
-              24°
-            </div>
-            <div class="col">
-              TUE <br />
-              🌧️ <br /><br />
-              29°<br />
-              24°
-            </div>
-            <div class="col">
-              WED <br />
-              ⛈️ <br /><br />
-              28° <br />
-              23°
-            </div>
-            <div class="col">
-              THU <br />
-              ⛈️
-              <br /><br />
-              29° <br />
-              23°
-            </div>
-            <div class="col">
-              FRI
-              <br />
-              ⛈️
-              <br />
-              <br />
-              28° <br />
-              23°
-            </div>
-          </div>
+          </div>          
+            <div class="weather-forecast" >
+          <div class="row" id="forecast">            
+            <div class="col-2">             
+              <div class="weather-temperature-date">MON</div>
+              <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="..." class="icon-day" width="50px" height="50px">
+              <div class="weather-range">
+                <span class="weather-temperature-max">30° </span>
+                <span class="weather-temperature-min">  24°</span>
+              </div>
+            </div>             
+         </div>
+        </div>
         </div>
         <p>
           <a
@@ -117,7 +94,7 @@
           >
           by Omobolanle Bashir
         </p>
-      </div>
+      
     </div>
 
     <script src="src/weather.js"></script>
