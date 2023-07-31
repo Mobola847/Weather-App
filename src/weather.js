@@ -29,19 +29,28 @@ let h1 = document.querySelector("h1");
 let formText = document.querySelector("#form-text");
 let form = document.querySelector("form");
 
-function displayForecast() {
+
+function formatDay(timestamp){
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay()
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day]
+}
+
+function displayForecast(response) {
+  let dailyforecast = response.data.daily
+  console.log(dailyforecast);
   let forecast = document.querySelector("#forecast");
-  let days = ["Mon", "Tue", "Wed"];
   let forecastHtml = "";
-  days.forEach(function (day) {
+  dailyforecast.forEach(function(forecastDay) {
     forecastHtml =
       forecastHtml +
       ` <div class="col-2">             
-              <div class="weather-temperature-date">${day}</div>
-              <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="..." class="icon-day" width="50px" height="50px">
+              <div class="weather-temperature-date">${formatDay(forecastDay.time)}</div>
+              <img src=${forecastDay.condition.icon_url} alt="..." class="icon-day" width="50px" height="50px">
               <div class="weather-range">
-                <span class="weather-temperature-max">30°</span>
-                <span class="weather-temperature-min">24°</span>
+                <span class="weather-temperature-max">${Math.round(forecastDay.temperature.maximum)}°</span>
+                <span class="weather-temperature-min">${Math.round(forecastDay.temperature.minimum)}°</span>
               </div>
             </div> `;
   });
@@ -49,7 +58,14 @@ function displayForecast() {
   forecast.innerHTML = forecastHtml;
 }
 
-displayForecast();
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let key = 'a97debbodf360470d17fdcc4cb3t8b4d';
+  let ApiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.lon}&lat=${coordinates.lat}&key=${key}`;
+  console.log(ApiUrl);
+  axios.get(ApiUrl).then(displayForecast)
+}
 
 function changes(response) {
   let weatherCode = `${response.data.weather[0].icon}`;
@@ -65,6 +81,8 @@ function changes(response) {
 
   temperature.innerHTML = `${celciusTemperature}`;
   humid.innerHTML = `${response.data.main.humidity}`;
+
+  getForecast(response.data.coord);
 }
 
 function getResult(event) {
