@@ -41,10 +41,12 @@ function displayForecast(response) {
   console.log(dailyforecast);
   let forecast = document.querySelector("#forecast");
   let forecastHtml = "";
-  dailyforecast.forEach(function (forecastDay) {
-    forecastHtml =
-      forecastHtml +
-      ` <div class="col-2">             
+
+  dailyforecast.forEach(function (forecastDay,index) {
+    if (index < 6) {
+      forecastHtml =
+        forecastHtml +
+        ` <div class="col-2">             
               <div class="weather-temperature-date">${formatDay(
                 forecastDay.time
               )}</div>
@@ -60,6 +62,7 @@ function displayForecast(response) {
                 )}°</span>
               </div>
             </div> `;
+    }
   });
 
   forecast.innerHTML = forecastHtml;
